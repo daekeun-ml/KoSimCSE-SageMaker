@@ -210,9 +210,9 @@ def main(args):
             lr_scheduler.step()
             optimizer.zero_grad()
             
-            epoch_pbar.update(1)
             # for every `args.eval_steps` steps, perform evaluation on STS task and print logs
             if (step + 1) % args.eval_steps == 0 or (step + 1) == len(train_dataloader):
+                epoch_pbar.update(args.eval_steps)                
                 model.eval()
                 # evaluate on the STS-B development set
                 sts_score = sts.dev(encode=encode)["avg"]
