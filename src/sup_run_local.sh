@@ -16,7 +16,6 @@ declare -a OPTS=(
     --eval_steps 50
     --seed 42
     --lora_dropout 0.05
-    --debug
 )
 
 SM_NUM_GPUS=$(nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)

@@ -8,7 +8,7 @@ declare -a OPTS=(
     --dataset_dir /opt/ml/input/data/training/
     --output_dir /opt/ml/model/
     --batch_size 64
-    --num_epochs 1
+    --num_epochs 3
     --learning_rate 3e-5
     --temperature 0.05
     --lr_scheduler_type "linear"    

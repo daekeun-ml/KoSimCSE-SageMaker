@@ -9,9 +9,6 @@ def show_embedding_score(tokenizer, model, sentences):
     print(score01, score02)
 
 def cal_score(a, b):
-    '''
-    코사인 유사도 구하는 함수
-    '''
     if len(a.shape) == 1: a = a.unsqueeze(0)
     if len(b.shape) == 1: b = b.unsqueeze(0)
 
